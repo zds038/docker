@@ -1,9 +1,9 @@
 FROM anapsix/alpine-java
-MAINTAINER zhang ds "zds038@qq.com"
-RUN mkdir /rooftrellen
-WORKDIR /rooftrellen
-RUN wget http://down.kaijie.club/filedown/rooftrellen-1.0-SNAPSHOT.zip
-RUN unzip rooftrellen-1.0-SNAPSHOT.zip
-WORKDIR /rooftrellen/rooftrellen-1.0-SNAPSHOT
-EXPOSE 9000
-CMD ./bin/rooftrellen -Dplay.crypto.secret=zerolinke
+MAINTAINER zhangds "zds038@qq.com"
+RUN wget http://7xukeq.com1.z0.glb.clouddn.com/MagicTunnel.war
+RUN wget http://7xukeq.com1.z0.glb.clouddn.com/apache-tomcat-9.0.0.M6.zip
+RUN unzip apache-tomcat-9.0.0.M6.zip /opt
+COPY MagicTunnel.war /opt/apache-tomcat-9.0.0.M6/webapps
+WORKDIR /opt/apache-tomcat-9.0.0.M6/bin
+EXPOSE 80
+CMD ["catalina.sh", "run"]
