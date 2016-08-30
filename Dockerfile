@@ -7,5 +7,5 @@ ENV CLASSPATH .:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
 ENV PATH $JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 RUN mkdir /home/upload
 RUN chmod 777 /home/upload
-EXPOSE 80
+EXPOSE 8080
 CMD ["/opt/apache-tomcat-9.0.0.M9/bin/catalina.sh", "run"]
